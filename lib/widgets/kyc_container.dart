@@ -18,24 +18,26 @@ class KycContainer extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-             
-              children: [
-                Text(
-                  'Get Started',
-                  style:
-                      TextStyle(fontWeight: FontWeight.bold, fontSize: 10.sp),
-                ),
-                SizedBox(height: 10,),
-                Text(
-                  'Let\'s start your 4 step KYC \nprocess.',
-                  style: TextStyle(
-                    fontSize: 8.5.sp,
-                    color: Colors.grey[600],
+            SizedBox(
+              width: MediaQuery.of(context).size.width * 0.50,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Text(
+                    'Get Started',
+                    style:
+                        TextStyle(fontWeight: FontWeight.bold, fontSize: 10.sp),
                   ),
-                ),
-              ],
+                  Text(
+                    'Let\'s start your 4 step KYC process.',
+                    style: TextStyle(
+                      fontSize: 8.5.sp,
+                      color: Colors.grey[600],
+                    ),
+                  ),
+                ],
+              ),
             ),
             MaterialButton(
               height: 4.h,
