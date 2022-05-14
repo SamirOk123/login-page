@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
+import 'package:toto_project/constants.dart';
 
 class CustomTextField extends StatelessWidget {
   const CustomTextField({Key? key, required this.hintText, this.suffixIcon})
@@ -11,15 +12,19 @@ class CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 6.h,
+      height: 5.h,
       child: TextField(
         decoration: InputDecoration(
-          contentPadding: EdgeInsets.only(top: 1.h, left: 2.h),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.all(Radius.circular(1.h)),
+            borderSide: const BorderSide(color: kGreen),
+          ),
+          contentPadding: EdgeInsets.only(left: 2.h),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(1.h),
           ),
           hintText: hintText,
-          hintStyle: const TextStyle(color: Colors.grey),
+          hintStyle: TextStyle(color: Colors.grey, fontSize: 10.sp),
           suffixIcon: suffixIcon,
         ),
       ),

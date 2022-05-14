@@ -12,7 +12,7 @@ class EmailPasswordHeader extends StatelessWidget {
       alignment: Alignment.centerLeft,
       child: Text(
         label,
-        style: TextStyle(fontWeight: FontWeight.w400, fontSize: 13.sp),
+        style: TextStyle(fontWeight: FontWeight.w500, fontSize: 10.sp),
       ),
     );
   }

@@ -13,13 +13,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Sizer(
       builder: (context, orientation, deviceType) {
-        return MaterialApp(
+        return const MaterialApp(
           title: 'Todo Project',
           debugShowCheckedModeBanner: false,
-          theme: ThemeData(
-            primarySwatch: Colors.teal,
-          ),
-          home: const LoginScreen(),
+          home: LoginScreen(),
         );
       },
     );

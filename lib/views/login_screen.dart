@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import 'package:toto_project/constants.dart';
+import 'package:toto_project/views/home_page.dart';
 import 'package:toto_project/widgets/email_password_header.dart';
 import 'package:toto_project/widgets/google_fb.dart';
 import 'package:toto_project/widgets/text_field.dart';
@@ -14,12 +15,12 @@ class LoginScreen extends StatelessWidget {
       child: Scaffold(
         body: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 3.h),
+            padding: EdgeInsets.symmetric(horizontal: 2.5.h),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 SizedBox(
-                  height: 6.h,
+                  height: 4.h,
                 ),
                 Align(
                   alignment: Alignment.centerLeft,
@@ -27,7 +28,7 @@ class LoginScreen extends StatelessWidget {
                     'Welcome back',
                     textAlign: TextAlign.start,
                     style:
-                        TextStyle(fontSize: 25.sp, fontWeight: FontWeight.bold),
+                        TextStyle(fontSize: 19.sp, fontWeight: FontWeight.bold),
                   ),
                 ),
                 SizedBox(
@@ -37,7 +38,7 @@ class LoginScreen extends StatelessWidget {
                   alignment: Alignment.centerLeft,
                   child: Text(
                     'Disrupting the tredition of lending and borrowing.',
-                    style: TextStyle(color: Colors.grey[600]),
+                    style: TextStyle(color: Colors.grey[600], fontSize: 9.sp),
                   ),
                 ),
                 SizedBox(
@@ -71,7 +72,7 @@ class LoginScreen extends StatelessWidget {
                     'Forgot Password?',
                     style: TextStyle(
                       decoration: TextDecoration.underline,
-                      fontSize: 12.sp,
+                      fontSize: 9.sp,
                       color: Colors.grey[700],
                     ),
                   ),
@@ -80,12 +81,18 @@ class LoginScreen extends StatelessWidget {
                   height: 10.h,
                 ),
                 MaterialButton(
-                  height: 5.7.h,
-                  minWidth: 26.w,
+                  height: 5.h,
+                  minWidth: 28.w,
                   color: kGreen,
                   textColor: Colors.white,
-                  onPressed: () {},
-                  child: const Text("Login"),
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => const HomePage()));
+                  },
+                  child: Text(
+                    "Login",
+                    style: TextStyle(fontSize: 9.sp),
+                  ),
                 ),
                 SizedBox(
                   height: 5.h,
@@ -103,7 +110,7 @@ class LoginScreen extends StatelessWidget {
                       ),
                       Text(
                         "Or continue with",
-                        style: TextStyle(fontSize: 11.sp, color: Colors.grey),
+                        style: TextStyle(fontSize: 9.sp, color: Colors.grey),
                       ),
                       Expanded(
                         child: Container(
@@ -120,28 +127,28 @@ class LoginScreen extends StatelessWidget {
                 ),
                 const GoogleFbIcons(),
                 SizedBox(
-                  height: 4.h,
+                  height: 12.h,
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      'Do not have an account?',
-                      style: TextStyle(
-                          fontSize: 13.sp, fontWeight: FontWeight.w400),
-                    ),
-                    SizedBox(
-                      width: 1.w,
-                    ),
-                    Text(
-                      'Register',
-                      style: TextStyle(
-                          decoration: TextDecoration.underline,
-                          color: kGreen,
-                          fontSize: 13.sp,
-                          fontWeight: FontWeight.w400),
-                    ),
-                  ],
+                RichText(
+                  text: TextSpan(
+                    children: [
+                      TextSpan(
+                        text: 'Do not have an account? ',
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 12.sp,
+                            fontWeight: FontWeight.w400),
+                      ),
+                      TextSpan(
+                        text: 'Register',
+                        style: TextStyle(
+                            color: kGreen,
+                            fontWeight: FontWeight.w400,
+                            decoration: TextDecoration.underline,
+                            fontSize: 12.sp),
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),

@@ -10,8 +10,8 @@ class GoogleFbIcons extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Container(
-          width: 7.h,
-          height: 7.h,
+          width: 6.5.h,
+          height: 6.5.h,
           decoration: const BoxDecoration(
             color: Colors.white,
             boxShadow: [
@@ -26,8 +26,8 @@ class GoogleFbIcons extends StatelessWidget {
           width: 6.w,
         ),
         Container(
-          width: 7.h,
-          height: 7.h,
+          width: 6.5.h,
+          height: 6.5.h,
           decoration: const BoxDecoration(
             color: Colors.white,
             boxShadow: [
