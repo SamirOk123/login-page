@@ -45,6 +45,10 @@ class KycContainer extends StatelessWidget {
               color: kGreen,
               textColor: Colors.white,
               onPressed: () {},
+              elevation: 0,
+              focusElevation: 0,
+              highlightElevation: 0,
+              splashColor: Colors.white,
               child: Text(
                 "Proceed",
                 style: TextStyle(fontSize: 8.5.sp),

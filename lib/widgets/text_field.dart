@@ -3,7 +3,7 @@ import 'package:sizer/sizer.dart';
 import 'package:toto_project/constants.dart';
 
 class CustomTextField extends StatelessWidget {
-  const CustomTextField({Key? key, required this.hintText, this.suffixIcon})
+   const CustomTextField({Key? key, required this.hintText, this.suffixIcon})
       : super(key: key);
 
   final String hintText;

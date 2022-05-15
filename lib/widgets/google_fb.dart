@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
 class GoogleFbIcons extends StatelessWidget {
-  const GoogleFbIcons({Key? key}) : super(key: key);
+   const GoogleFbIcons({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

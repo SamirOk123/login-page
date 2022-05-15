@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import 'package:toto_project/views/login_screen.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Future.delayed(const Duration(milliseconds: 300));
   runApp(const MyApp());
 }
 
